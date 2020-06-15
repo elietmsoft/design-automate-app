@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD92E867-A39B-477E-8FE9-ABFBE6FC8C75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>memory_automate</RootNamespace>
+    <AssemblyName>memory_automate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>M:\cours\Setups+dll+jar\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormSkin">
+      <HintPath>M:\cours\Setups+dll+jar\WinFormSkin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Controller\AfficheSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Controller\AfficheSV.Designer.cs">
+      <DependentUpon>AfficheSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controller\fenetreSpash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Controller\fenetreSpash.Designer.cs">
+      <DependentUpon>fenetreSpash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controller\TextCircle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Controller\TextCircle.Designer.cs">
+      <DependentUpon>TextCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Dessin.cs" />
+    <Compile Include="Model\Link.cs" />
+    <Compile Include="View\ViewDessin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewDessin.Designer.cs">
+      <DependentUpon>ViewDessin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewHote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewHote.Designer.cs">
+      <DependentUpon>ViewHote.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources\Controller\AfficheSV.resx">
+      <DependentUpon>AfficheSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controller\fenetreSpash.resx">
+      <DependentUpon>fenetreSpash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controller\TextCircle.resx">
+      <DependentUpon>TextCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\ViewDessin.resx">
+      <DependentUpon>ViewDessin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewHote.resx">
+      <DependentUpon>ViewHote.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hote2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transition2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hote1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transition1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\initial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nommer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nommer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nommer11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reflex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\determin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
