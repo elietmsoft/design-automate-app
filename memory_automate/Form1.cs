@@ -275,6 +275,7 @@ namespace memory_automate
                         if (paquet.Equals("Paquet " + item.paquet))
                         {
                             voisin += item.sommet2;
+
                             voisin += ",";
                         }
                     }
@@ -320,7 +321,6 @@ namespace memory_automate
                             {
                                 if (ColumnName.Equals("Paquet " + p.paquet))
                                 {
-
                                     voisinHote += p.sommet2;
                                     voisinHote += ", ";
                                     counter++;

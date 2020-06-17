@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblpourc = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTitre = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblpourc = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -91,6 +91,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(237, 232);
             this.panel2.TabIndex = 1;
+            // 
+            // lblpourc
+            // 
+            this.lblpourc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblpourc.AutoSize = true;
+            this.lblpourc.BackColor = System.Drawing.Color.Transparent;
+            this.lblpourc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpourc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(69)))), ((int)(((byte)(30)))));
+            this.lblpourc.Location = new System.Drawing.Point(178, 209);
+            this.lblpourc.Name = "lblpourc";
+            this.lblpourc.Size = new System.Drawing.Size(32, 18);
+            this.lblpourc.TabIndex = 17;
+            this.lblpourc.Text = "0%";
             // 
             // label2
             // 
@@ -214,19 +227,6 @@
             // 
             this.timer1.Interval = 250;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblpourc
-            // 
-            this.lblpourc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblpourc.AutoSize = true;
-            this.lblpourc.BackColor = System.Drawing.Color.Transparent;
-            this.lblpourc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpourc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(69)))), ((int)(((byte)(30)))));
-            this.lblpourc.Location = new System.Drawing.Point(178, 209);
-            this.lblpourc.Name = "lblpourc";
-            this.lblpourc.Size = new System.Drawing.Size(32, 18);
-            this.lblpourc.TabIndex = 17;
-            this.lblpourc.Text = "0%";
             // 
             // fenetreSpash
             // 

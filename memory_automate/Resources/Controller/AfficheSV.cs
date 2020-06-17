@@ -207,8 +207,10 @@ namespace memory_automate.Resources.Controller
         {
 
         }
+
         List<string> listInitColorRed = new List<string>();
         List<string> listFinalColorBlue = new List<string>();
+
         private void pictureNommer_Click(object sender, EventArgs e)
         {
             if (verifyAutomateDeterministe(tabledetermin))
@@ -236,15 +238,15 @@ namespace memory_automate.Resources.Controller
                                         if (verifyInitEtat(hote) > 0)
                                         {
                                             cpytabledetermin.Rows[i].Cells[j].Value = "H" + c;
-                                            cpytabledetermin.Rows[i].Cells[j].Style.ForeColor = Color.Red;
-                                            cpytabledetermin.Rows[i].Cells[j].Style.SelectionForeColor = Color.Red;
+                                            //cpytabledetermin.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                                            //cpytabledetermin.Rows[i].Cells[j].Style.SelectionForeColor = Color.Red;
                                             listInitColorRed.Add(cpytabledetermin.Rows[i].Cells[j].Value.ToString());
                                         }
                                         else if (verifyFinalEtat(hote) > 0)
                                         {
                                             cpytabledetermin.Rows[i].Cells[j].Value = "H" + c;
-                                            cpytabledetermin.Rows[i].Cells[j].Style.ForeColor = Color.Blue;
-                                            cpytabledetermin.Rows[i].Cells[j].Style.SelectionForeColor = Color.Blue;
+                                            //cpytabledetermin.Rows[i].Cells[j].Style.ForeColor = Color.Blue;
+                                            //cpytabledetermin.Rows[i].Cells[j].Style.SelectionForeColor = Color.Blue;
                                             listFinalColorBlue.Add(cpytabledetermin.Rows[i].Cells[j].Value.ToString());
                                         }
                                         else
@@ -313,26 +315,31 @@ namespace memory_automate.Resources.Controller
             int L = dgv.Rows.Count - 1;
             int C = dgv.Columns.Count;
 
-            for (int i = 0; i < L; i++)
+            for (int j = 0; j < C; j++)
             {
-                for (int j = 0; j < C; j++)
+                for (int i = 0; i < L; i++)
                 {
-                    if (listInitColorRed.Contains(dgv.Rows[i].Cells[j].Value.ToString()))
+                    if (j == 0)
                     {
-                        dgv.Rows[i].Cells[j].Style.ForeColor = Color.Red;
-                        dgv.Rows[i].Cells[j].Style.SelectionForeColor = Color.Red;
+                        if (listInitColorRed.Contains(dgv.Rows[i].Cells[j].Value.ToString()))
+                        {
+                            dgv.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                            dgv.Rows[i].Cells[j].Style.SelectionForeColor = Color.Red;
+                        }
+                        else if (listFinalColorBlue.Contains(dgv.Rows[i].Cells[j].Value.ToString()))
+                        {
+                            dgv.Rows[i].Cells[j].Style.ForeColor = Color.Blue;
+                            dgv.Rows[i].Cells[j].Style.SelectionForeColor = Color.Blue;
+                        }
+                        else
+                        {
+                            dgv.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                            dgv.Rows[i].Cells[j].Style.SelectionForeColor = Color.Black;
+                        }
                     }
-                    else if (listFinalColorBlue.Contains(dgv.Rows[i].Cells[j].Value.ToString()))
-                    {
-                        dgv.Rows[i].Cells[j].Style.ForeColor = Color.Blue;
-                        dgv.Rows[i].Cells[j].Style.SelectionForeColor = Color.Blue;
-                    }
-                    else
-                    {
-                        dgv.Rows[i].Cells[j].Style.ForeColor = Color.Black;
-                        dgv.Rows[i].Cells[j].Style.SelectionForeColor = Color.Black;
-                    }
+                   
                 }
+                break; //on a besoin juste de colorier les éléments de la première colonne
             }
         }
         private int verifyInitEtat(string hote)
